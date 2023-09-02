@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@100..900&family=Public+Sans:wght@100..900&display=swap");
+
+:root {
+    font-size: 62.5%;
+    background-color: $white;
+    color: $black;
+}
+
+body, button, input, select, textarea {
+    font-family: 'Public Sans', sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-variation-settings: 'wght' 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-variation-settings: 'wght' 375;
+}
+table{
+    font-feature-settings: 'tnum';
+
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <title>Viewport vis</title>
+  </head>
+  <body>
+    <!--their colours; 
+    $yellow: #F7C832;
+    $blue: #53BACC;
+    $orange: #EE7130;
+    $purple: #613798; 
+    -->
+    <template id="viewps">
+      {{#.}}
+      <label
+        class="bar"
+        for="w{{width}}"
+        style="width:{{width}}px; 
+        background-color: color-mix(in hsl, #613798 {{alpha}}%, #61379855 )"
+      >
+        <div
+          class="popout"
+          style="
+            width:{{width}}px;
+            height:{{maxHeight}}px;
+            top:calc({{maxHeight}}px / -2)"
+        >
+          <div class="wh-box">
+            <div>
+              <p class="w">
+                <span>&larr;</span> <span>{{width}}px</span> <span>&rarr;</span>
+              </p>
+              <p>{{percent}}% of total</p>
+              <p>{{heightsCount}} {{heightsLanguage}}</p>
+            </div>
+          </div>
+          {{#heights}}
+          <div class="heights" style="bottom: {{.}}px"></div>
+          {{/heights}}
+        </div>
+      </label>
+      <input type="radio" name="widths" id="w{{width}}" />
+      {{/.}}
+    </template>
+    <main>
+      <div class="about">
+        <h1>Viewports</h1>
+      </div>
+      <div id="graph"></div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.0/mustache.min.js"
+    ></script>
+    <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+:root{
+
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+// TYPO
+$font-size: 1.6rem;
+$line-height: 1.5;
+$text-color: black;
+
+// LAYOUT
+$row-height: 4rem;
+$day-width: 150px;
+$header-height: 4.5rem;
+$spacing: 1.2rem;
+$plot-height: 50vh;
+
+// COLOURS
+$background: #789;
+$grey: #efefef;
+$today: #abc;
+$primary: #000;
+$odd: $grey;
+$even: darken($grey, 5%);
+$table-background: $background;
+$odd-month:rgba($primary,2%);
+$weekend: rgba($primary,7%);
+$odd-month-weekend: rgba($primary,50%);
+$header: $today;
+$dayColor: $today;
+$border: rgba($primary,30%);
+$neg-color: #980000;
+$white: #fff;
+$black: black;
